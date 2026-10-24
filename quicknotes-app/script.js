@@ -143,6 +143,7 @@ function render() {
 // 8. ADD A NEW NOTE
 function addNote() {
   const text = textarea.value.trim();
+  saveButton.addEventListener("click", addNote);
 
   // Validate empty notes.
   if (text === "") {
@@ -240,5 +241,4 @@ function restoreDraft() {
 // 14. INITIALIZE THE APPLICATION
 loadNotes();
 restoreDraft();
-restoreTheme();
 render();
