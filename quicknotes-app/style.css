@@ -1,0 +1,159 @@
+/* Root: Default light theme colour variables */
+:root {
+  --bg-color: #f4f6f8;
+  --text-color: #222222;
+  --header-bg: #8e0000;
+  --section-bg: #ffffff;
+  --button-bg: #0ba184;
+  --button-hover: #088a70;
+  --note-bg: #fffbe6;
+  --note-border: #0ba184;
+  --input-border: #cccccc;
+  --footer-color: #777777;
+  --warning-color: orange;
+  --over-color: red;
+}
+
+/* Reset: Predictable sizing and no default body margin */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* Header */
+header {
+  background-color: var(--header-bg);
+  color: white;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+/* Centre the main content and limit its width */
+main {
+  max-width: 640px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+section {
+  background-color: var(--section-bg);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Form layout with Flexbox */
+#note-form {
+  display: flexbox;
+  flex-wrap: nowrap;
+}
+
+#note-form label {
+  width: 100%;
+  font-weight: bold;
+}
+
+/* Note input */
+#note-input,
+#note-text {
+  flex: 1;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: var(--section-bg);
+  color: var(--text-color);
+  font-family: inherit;
+}
+
+/* Buttons */
+button {
+  background-color: var(--button-bg);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+/* Notes list */
+#notes-list {
+  list-style: none;
+  padding: 0;
+}
+
+.note {
+  background-color: var(--note-bg);
+  color: var(--text-color);
+  border-left: 4px solid var(--note-border);
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+/* Features */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+/* Keyboard shortcuts table */
+.keyboard-shortcuts-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid var(--input-border);
+}
+
+/* Character counter warning states */
+.warning {
+  color: var(--warning-color);
+}
+
+.over {
+  color: var(--over-color);
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: var(--footer-color);
+  padding: 16px;
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  #note-form {
+    flex-direction: column;
+  }
+
+  header {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+}
