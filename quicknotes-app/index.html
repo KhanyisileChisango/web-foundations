@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickNotes App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>QuickNotes</h1>
+      <p>Your simple space for quick thoughts.</p>
+    </header>
+
+    <main>
+      <!-- Note input section -->
+      <section id="note-section">
+        <h2>Create a Note</h2>
+
+        <label for="note-text">New note:</label>
+        <textarea
+          id="note-text"
+          placeholder="Type your note here..."
+          rows="5"
+        ></textarea>
+
+        <!-- Character and word counters -->
+        <p id="char-count">0 / 200 characters</p>
+        <p id="word-count">0 words</p>
+
+        <!-- Validation error messages -->
+        <p id="error-message" role="alert"></p>
+
+        <!-- Action buttons -->
+        <div class="button-group">
+          <button type="button" id="clear-btn">Clear</button>
+          <button type="button" id="theme-toggle">Dark mode</button>
+        </div>
+      </section>
+
+      <!-- Notes display section -->
+      <section id="saved-notes-section">
+        <h2>My Notes</h2>
+
+        <!-- Search input -->
+        <label for="search-input">Search notes:</label>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search your notes..."
+        />
+
+        <!-- Total notes count -->
+        <p id="note-count">0 notes</p>
+
+        <!-- Notes will be added here by JavaScript -->
+        <ul id="notes-list"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 QuickNotes</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
